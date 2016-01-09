@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Likers</title>
+        <title>Likers - iOS</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
@@ -54,47 +54,10 @@ Seems like the only use of the lock is keep multithread safe.</p>
 <p>Consider an XYZPerson object in which both a person’s first and last names are changed using atomic accessors from one thread. If another thread accesses both names at the same time, the atomic getter methods will return complete strings (without crashing), but there’s no guarantee that those values will be the right names relative to each other. If the first name is accessed before the change, but the last name is accessed after the change, you’ll end up with an inconsistent, mismatched pair of names.</p>
 </blockquote>
 <p>So, as conclusion, don't forget to use atomic when you are dealing with multithread and keep in mind that atomic should not be your only "safe belt".</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/hello-world.html" rel="bookmark"
-                           title="Permalink to Hello World!">Hello World!</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2015-09-27T00:00:00-05:00">
-                Published: Sun 27 September 2015
-        </abbr>
-		<br />
-        <abbr class="modified" title="2015-09-27T00:00:00-05:00">
-                Updated: Sun 27 September 2015
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/jinhuan-li.html">Jinhuan Li</a>
-        </address>
-<p>In <a href="/category/about.html">About</a>.</p>
-<p>tags: <a href="/tag/hello-world.html">Hello World</a> </p>
-</footer><!-- /.post-info -->                <h1>About Me</h1>
-<h2>Jinhuan Li</h2>
-<p>likers, </p>
-<p><em>love life, love coding.</em></p>
-<h2>Test Line</h2>
-<h2>Test Line 2</h2>
-                <a class="readmore" href="/hello-world.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
 <p class="paginator">
     Page 1 / 1
 </p>
-                </section><!-- /#content -->
+            </aside><!-- /#featured -->
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>
