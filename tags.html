@@ -1,58 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>Likers - Tags</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Jinhuan Li" />
+        <meta name="copyright" content="Jinhuan Li" />
 
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-</head>
+        <title>All Tags · Likers
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-144x144.png" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><span class=site-name>Likers</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li  class="active"><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Likers </a></h1>
-                <nav><ul>
-                    <li><a href="/category/about.html">About</a></li>
-                    <li><a href="/category/ios.html">iOS</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="/tags.html">All Tags</a></h1>
+    </header>
+</div>
+<div class="row-fluid">
+    <div class="span8 offset2">
+        <form class="form-search">
+            <input type="text" class="input-medium search-query filterinput" placeholder="Find a tag">
+        </form>
+        <ul class="list-of-tags">
+            <li>
+            <a href="/tags.html#Hello-World-ref">Hello World<span>1</span></a>
+            </li>
+            <li>
+            <a href="/tags.html#interview-ref">interview<span>1</span></a>
+            </li>
+            <li>
+            <a href="/tags.html#iOS-ref">iOS<span>1</span></a>
+            </li>
+        </ul>
+    </div>
+</div>
 
-<section id="content" class="body">
-    <h1>Tags for Likers</h1>
-    <ul>
-        <li><a href="/tag/hello-world.html">Hello World</a> (1)</li>
-        <li><a href="/tag/interview.html">interview</a> (1)</li>
-        <li><a href="/tag/ios.html">iOS</a> (1)</li>
+<div class="row-fluid">
+    <div class="span8 offset2">
+        <h2 id="Hello-World-ref" class="tag-title">Hello World</h2>
+        <ul class="articles-in-tag">
+ 
+            <li><a href="/hello-world.html">Hello World!  </a></li>
+        </ul>
+
+        <h2 id="interview-ref" class="tag-title">interview</h2>
+        <ul class="articles-in-tag">
+ 
+            <li><a href="/nonatomic-vs-atomic.html">IOS tips #1: Nonatomic VS Atomic  </a></li>
+        </ul>
+
+        <h2 id="iOS-ref" class="tag-title">iOS</h2>
+        <ul class="articles-in-tag">
+ 
+            <li><a href="/nonatomic-vs-atomic.html">IOS tips #1: Nonatomic VS Atomic  </a></li>
+        </ul>
+
+    </div>
+</div>
+
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
     </ul>
-</section>
+</div>
+</footer>        <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
 
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
 
-                            <li><a href="<https://github.com/likers>">github</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+<script>
+    (function ($) {
+        // custom css expression for a case-insensitive contains()
+        jQuery.expr[':'].Contains = function(a,i,m){
+            return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase())>=0;
+        };
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+        function listFilter() {
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+            $('.filterinput')
+            .change( function () {
+                var filter = $(this).val();
+                if(filter) {
+                    // this finds all links in a list that contain the input,
+                    // and hide the ones not containing the input while showing the ones that do
+                    $('.list-of-tags').find("a:not(:Contains(" + filter + "))").parent().hide();
+                    $('.list-of-tags').find("a:Contains(" + filter + ")").parent().show();
+                    } else {
+                    $('.list-of-tags').find("li").show();
+                }
+                return false;
+            })
+            .keyup( function () {
+                // fire the above change event after every letter
+                $(this).change();
+            });
+        }
 
-</body>
+        //ondomready
+        $(function () {
+            listFilter($());
+        });
+    }(jQuery));
+
+</script>
+
+
+    </body>
 </html>
