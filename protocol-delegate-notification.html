@@ -60,7 +60,28 @@
 
             <h1>What's the deference between protocol, delegate and notification? When to use them?</h1>
 <h2>Protocol</h2>
-<p>A protocol, declared with the (@protocol syntax in Objective-C) is used to declare a set of methods that a class "adopts" (declares that it will use this protocol) will implement. This means that you can specify in your code that, "you don't care which class is used as long as it implements a particular protocol". This can be done in Objective-C as follows:</p>
+<p>A protocol is used to declare a set of methods that a class "adopts" (declares that it will use this protocol) will implement. This means that you can specify in your code that, "you don't care which class is used as long as it implements a particular protocol". </p>
+<h2>Delegate</h2>
+<p>Delegates are a use of the language feature of protocols. In the Cocoa frameworks, the delegate design pattern is used to specify an instance of a class which conforms to a particular protocol. This particular protocol specifies methods that the delegate class should implement to perform specific actions at given events. The class that uses the delegate knows that its delegate coforms to the protocol, so it knows that it can call the implemented methods at given times. This design pattern is a great way of <strong>decoupling</strong> the classes, because it makes it really easy to exchange one delegate instance for another</p>
+<h2>Protocol VS Delegate</h2>
+<ul>
+<li>Protocol: Enabling Communication Between Objects Not Related by Inheritance</li>
+<li>Delegate: It is a <strong>design pattern</strong> at runtime, it sends a message to its delegate; the message tells the delegate that some event is about to happen and asks for some response.The delegate implements the method invoked by the message and returns an appropriate value</li>
+</ul>
+<h2>Notification</h2>
+<p>The concept of notification differs from delegation in that it allows a message to be sent to more than one object. It is more like a broadcast rather than a straight communication between two objects. It removes dependencies between the sending and receiving object(s) by using a notification center to manage the sending and receiving of notifications. The sender does not need to know if there are any receivers registered with the notification center. There can be one, many or even no receivers of the notification registered with the notification center.</p>
+<h2>Delegate VS Notification</h2>
+<ul>
+<li>
+<p>Delegate is like a <strong>telephone call</strong>. You call up your buddy and specifically want to talk to them. You can say something, and they can respond. You can talk until you hang up the phone. Delegates, in much the same way, create a link between two objects, and you don't need to know what type the delegate will be, it simply has to implement the protocol. </p>
+</li>
+<li>
+<p>On the other hand, NSNotifications are like a <strong>radio station</strong>. They broadcast their message to whoever is willing to listen. The radio station <strong>can't receive feedback from it's listeners</strong> (unless it has a telephone, or delegate). The listeners <strong>can ignore</strong> the message, or they can do something with it. NSNotifications allow you to send a message to any objects, but you won't have a link between them to communicate back and forth.</p>
+</li>
+<li>
+<p>Delegator can receive feedback from it's delegate, some times the feedback is required(with <code>require</code> key word)</p>
+</li>
+</ul>
             <aside>
             <hr/>
             <nav>
@@ -78,7 +99,7 @@
             <time pubdate="pubdate" datetime="2016-01-30T00:00:00-06:00">Jan 30, 2016</time>
  
             <h4>Last Updated</h4>
-            <div class="last_updated">2016-01-31 00:00:00-06:00</div>
+            <div class="last_updated">2016-02-01 00:00:00-06:00</div>
             <h4>Category</h4>
             <a class="category-link" href="/categories.html#iOS-ref">iOS</a> 
             <h4>Tags</h4>
