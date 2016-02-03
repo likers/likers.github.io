@@ -6,7 +6,9 @@
         <meta name="author" content="Jinhuan Li" />
         <meta name="copyright" content="Jinhuan Li" />
 
-        <title>Likers - Authors</title>
+<meta name="keywords" content="iOS, interview, application states, iOS, application states" />
+        <title>IOS Tips #4: iOS Application States  · Likers
+</title>
         <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="http://likers.github.io/theme/css/style.css" media="screen">
@@ -46,10 +48,72 @@
             <div class="row-fluid">
                 <div class="span1"></div>
                 <div class="span10">
-    <h1>Authors on Likers</h1>
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="http://likers.github.io/ios-application-states.html"> IOS Tips #4: iOS Application States  </a></h1>
+    </header>
+</div>
 
-    <ul>        <li><a href="http://likers.github.io/author/jinhuan-li.html">Jinhuan Li</a> (7)</li>
-    </ul>
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <h1>iOS Application States</h1>
+<p>The iOS application states are as follows:</p>
+<ul>
+<li>
+<p>Not running state: The app has not been launched or was running but was terminated by the system.</p>
+</li>
+<li>
+<p>Inactive state: The app is running in the foreground but is currently not receiving events. (It may be executing other code though.) An app usually stays in this state only briefly as it transitions to a different state. The only time it stays inactive for any period of time is when the user locks the screen or the system prompts the user to respond to some event (such as an incoming phone call or SMS message).</p>
+</li>
+<li>
+<p>Active state: The app is running in the foreground and is receiving events. This is the normal mode for foreground apps.
+Background state: The app is in the background and executing code. Most apps enter this state briefly on their way to being suspended. However, an app that requests extra execution time may remain in this state for a period of time. In addition, an app being launched directly into the background enters this state instead of the inactive state.</p>
+</li>
+<li>
+<p>Suspended state: While suspended, an app remains in memory but does not execute any code. When a low-memory condition occurs, the system may purge suspended apps without notice to make more space for the foreground app.</p>
+</li>
+</ul>
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="http://likers.github.io/protocol-delegate-notification.html" title="Previous: IOS Tips #3: Protocol, Delegate and Notification">IOS Tips #3: Protocol, Delegate and Notification</a></li>
+ 
+                <li class="next_article"><a href="http://likers.github.io/block.html" title="Next: IOS Tips #4: Block">IOS Tips #4: Block</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2016-02-02T00:00:00-06:00">Feb 2, 2016</time>
+ 
+            <h4>Last Updated</h4>
+            <div class="last_updated">2016-02-02 00:00:00-06:00</div>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#iOS-ref">iOS</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#application-states-ref">application states
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#interview-ref">interview
+                    <span>3</span>
+</a></li>
+                <li><a href="/tags.html#iOS-ref">iOS
+                    <span>6</span>
+</a></li>
+            </ul>
+
+        </div>
+        </section>
+</div>
+</article>
                 </div>
                 <div class="span1"></div>
             </div>
@@ -61,7 +125,7 @@
         <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
     </ul>
 </div>
-</footer>        <script src="http://code.jquery.com/jquery.min.js"></script>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
         <script>
             function validateForm(query)
@@ -69,5 +133,6 @@
                 return (query.length > 0);
             }
         </script>
+
     </body>
 </html>
