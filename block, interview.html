@@ -64,6 +64,15 @@
 <h2>What is blocks?</h2>
 <p>Blocks are a language-level feature added to C, Objective-C and C++, which allow you to create distinct segments of code that can be passed around to methods or functions as if they were values. Blocks are Objective-C objects, which means they can be added to collections like NSArray or NSDictionary. They also have the ability to capture values from the enclosing scope, making them similar to closures or lambdas in other programming languages.</p>
 <p>The basic idea of a block is to treat <strong>a small piece of code</strong> as if it were a value. The piece of code can then be passed as a parameter in messages or assigned to a variable. Eventually, at some future time, the code will be executed.</p>
+<h2>Why block is powerful?</h2>
+<ul>
+<li>
+<p>Blocks put important pieces of code in prominent places where they can be easily found, making code more readable and easier to modify. </p>
+</li>
+<li>
+<p>Blocks are particularly useful in <strong>callbacks</strong>, where the code for dealing with a response to an action can be included as a parameter in the method initiating the action. This is usually much more convenient than digging through delegate methods. Using blocks tends to make code simpler and to allow code that is related to be found together.</p>
+</li>
+</ul>
             <aside>
             <hr/>
             <nav>
