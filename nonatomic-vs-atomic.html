@@ -64,17 +64,19 @@
 <p>always use nonatomic because it's faster</p>
 </blockquote>
 <h2>But Why?</h2>
-<p>Short answer is: atomic use extra <strong>"lock"</strong> to the property before setter or getter, and after that <strong>"unlok"</strong> it. This lock cost more resources and makes atomic a little slow (lower performance) than nonatomic which has no lock.</p>
+<p>Short answer is: atomic use extra <strong>"lock"</strong> to the property before a thread calls the setter or getter, and after that <strong>"unlok"</strong> it. This lock cost more resources and makes atomic a little slow (lower performance) than nonatomic which has no lock.</p>
 <h2>Why lock?</h2>
 <p>This lock is used to keep property safe under multithread and prevents concurrent access to the property. Before one thread initializing the object, lock this object and so that other thread can not access it and prevent the risk of confusion.</p>
-<p><em>Seems like the only use of the lock is keep multithread safe.</em></p>
+<h2>How to keep mutithread safe?</h2>
+<p><code>atomic</code> means that the synthesized accessors ensure that a value is always fully retrieved by the getter method or fully set via the setter method. In other words, the properties specified as <code>atomic</code> are guaranteed to always return a fully initialized object.</p>
 <h2>Then why always use nonatomic?</h2>
 <p>Since most of the classes under iOS, especially the ones related to UI, will be used in a single-threaded environment, it is safe to drop atomic. Even though the atomic is not that expensive, you don't need to pay for what you don't need. </p>
 <h2>Important: atomic is not 100% safe</h2>
-<p>Atomic is only thread-safe with simple use. It is not garantueed. <a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/EncapsulatingData/EncapsulatingData.html">Appledoc</a> says the following:</p>
+<p>Atomic is only thread-safe with simple use. It is not guaranteed. <a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/EncapsulatingData/EncapsulatingData.html">Appledoc</a> says the following:</p>
 <blockquote>
 <p>Consider an XYZ Person object in which both a person’s first and last names are changed using atomic accessors from one thread. If another thread accesses both names at the same time, the atomic getter methods will return complete strings (without crashing), but there’s no guarantee that those values will be the right names relative to each other. If the first name is accessed before the change, but the last name is accessed after the change, you’ll end up with an inconsistent, mismatched pair of names.</p>
 </blockquote>
+<p><strong>That means: <code>atomic</code> only guarantees that you will get/set the property without crash, but will not guarantee to get/set the corret value you want under multithread.</strong>  </p>
 <p>So, as conclusion, don't forget to use atomic when you are dealing with multithread and keep in mind that atomic should not be your only "safe belt".</p>
             <aside>
             <hr/>
@@ -95,7 +97,7 @@
             <time pubdate="pubdate" datetime="2016-01-08T00:00:00-06:00">Jan 8, 2016</time>
  
             <h4>Last Updated</h4>
-            <div class="last_updated">2016-01-10 00:00:00-06:00</div>
+            <div class="last_updated">2016-08-02 00:00:00-05:00</div>
             <h4>Category</h4>
             <a class="category-link" href="/categories.html#iOS-ref">iOS</a> 
             <h4>Tags</h4>
